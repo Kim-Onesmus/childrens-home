@@ -1,0 +1,26 @@
+{% extends 'app/base.html' %}
+{% block content %}
+{% load static %}
+<div class="form-content">
+    <p class="heading">
+        Register
+    </p>
+    <br>
+    <div class="message">
+        {% for message in messages %}
+        <p>{{message}}</p>
+        {% endfor %}
+    </div>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="text" name="first_name" placeholder="First name" maxlength="25" required><br><br>
+        <input type="text" name="last_name" placeholder="Last name" maxlength="25" required><br><br>
+        <input type="text" name="username" placeholder="Username" maxlength="25" required><br><br>
+        <input type="email" name="email" placeholder="Email Address" maxlength="100" required><br><br>
+        <input type="password" name="password1" placeholder="Password" minlength="8" required><br><br>
+        <input type="password" name="password2" placeholder="Confirm Password" minlength="8" required><br><br>
+        <button>Register</button><br><br>
+        Already have an account <a href="{% url 'login' %}">Log In</a> 
+    </form>
+</div>
+{% endblock content %}    

@@ -1,0 +1,20 @@
+{% extends 'app/base.html' %}
+{% block content %}
+    <div class="form-content">
+        <p class="heading">
+            LogIn
+        </p>
+        <br>
+        <div class="message">
+            {% for message in messages %}
+            <p>{{message}}</p>
+            {% endfor %}
+        </div>
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Username" maxlength="25" required><br><br>
+            <input type="password" name="password" placeholder="Password" minlength="8" required><br><br>
+            <button>LogIn</button>
+        </form>  
+    </div>      
+{% endblock content %}

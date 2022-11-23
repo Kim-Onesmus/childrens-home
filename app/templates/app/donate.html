@@ -1,0 +1,26 @@
+{% include 'app/base.html' %}
+{% block content %}
+{% load static %}
+
+<h3>Please enter correct daitails</h3>
+<div class="form-content">
+    <p class="heading">
+        Ask question
+    </p>
+    <br>
+    <form action="" method="POST">
+        {% csrf_token %}
+        Full Name <br>
+        {{form.full_name}}<br><br>
+        Mobile Number <br>
+        {{form.mobile_no}}<br><br>
+        Donations <br>
+        {{form.donations}}<br><br>
+        *If you will deliver your donation please proceed and book a visit<br>
+        Delivery<br>
+        {{form.delivery}}<br><br>
+        <button>Donate</button>
+    </form>
+</form>
+
+{% endblock content %}

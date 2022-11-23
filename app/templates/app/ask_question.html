@@ -1,0 +1,23 @@
+{% extends 'app/base.html' %}
+{% block content %}
+
+<div class="form-content">
+    <p class="heading">
+        Ask question
+    </p>
+    <br>
+    <form action="" method="POST">
+        {% csrf_token %}
+        Owner
+        <br>
+        {{form.owner}}<br><br>
+        Phone Number
+        <br>
+        {{form.number}}<br><br>
+        Question
+        <br>
+        {{form.question}}<br><br>
+        <button>Ask Question</button>
+    </form>
+</div>
+{% endblock content %}

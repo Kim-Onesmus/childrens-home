@@ -1,0 +1,58 @@
+{% include 'app/base.html' %}
+{% load static %}
+{% block content %}
+<div class="body">
+    {{user.username}}
+    Welcome to Charity childrens home
+    <br><br>
+    <div class="images">
+        <div class="image-card">
+            <div class="card">
+                <img src="{% static "images/home.jpg" %}">
+                <h3>Charity childrens home we take care of the: <br> Orphan childrens, <br> Street children, <br> Abandoned children and <br> Homeless children. </h3>
+            </div>
+        </div>
+        <br><br>
+        <div class="image2">
+            <div class="image-card">
+                <div class="card">
+                    {% comment %} <img src="{% static "images/home1.jpg" %}"> {% endcomment %}
+                    {% comment %} <br><br> {% endcomment %}
+                    <img src="{% static "images/home1.jpg" %}">
+                    <h3>We accept all types of donations including: Clothing, Food, Money and all other sorts of dornations that you have.</h3><br><br>
+                    <p>To donate click <a href="{% url 'donate' %}">here</a></p>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="images3">
+            <div class="image-card">
+                <div class="card">
+                    <img src="{% static 'images/visit.jpg' %}">
+                    <h3>We accept visitors in our childrens Home. All are welcomed. We are located <a href="{% url 'location' %}">here</a>. To book a visit click here <a href="{% url 'book_visit' %}">Book a visit</a></h3>
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </div>
+</div>
+<div class="question">
+    {% if user.is_authenticated %}
+    <a href="{% url 'ask_question' user.id %}">Ask question</a>
+    {% endif %}
+</div>
+<br>
+<p>Asked questions</p>
+<div class="asked-question">
+{% for questions in asked_question reversed %}
+    <div class="question-card">
+        <div class="card1">
+            <div class="question">
+                @{{questions.owner.username}}<br><br>
+                Question: {{questions.question}}
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</div>
+{% endblock content %}

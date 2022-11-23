@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    position: sticky;
+    align-items: center;
+    justify-content: center;
+    top: 0px;
+    cursor: pointer;
+    height: 70px;
+}
+
+.nav-list {
+    width: 90%;
+    display: flex;
+}
+
+.nav-list li {
+    list-style: none;
+    padding: 10px 10px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-list li a:hover {
+    color: black;
+}
+
+.centerNav {
+    text-align: center;
+    width: 90%;
+}
+
+.rightNav {
+    width: 70%;
+    text-align: center;
+    text-decoration: none;
+    nav-down: auto;
+}
+
+.rightNav a {
+    text-decoration: none;
+    color: black;
+}
+
+.background {
+    background-color: darkgrey;
+}
+
+.dd-btn {
+    border: none;
+    width: 100%;
+    height: auto;
+    color: black;
+    background-color: darkgrey;
+}
+
+.dd-content {
+    position: absolute;
+    width: 90px;
+    height: 0px;
+    transition: height 5s;
+    overflow: hidden;
+    scroll-behavior: auto;
+    color: black;
+}
+
+.dd:hover>.dd-content {
+    height: auto;
+}
+
+.dd-content>a {
+    padding: 7px;
+    display: block;
+    text-decoration: none;
+    color: black;
+    background-color: dodgerblue;
+}
+
+.body {
+    margin: 0% auto;
+    text-align: center;
+}
+
+.image_card {
+    display: inline-flex;
+    padding: 20px;
+}
+
+.card {
+    margin: 0% auto;
+    width: 70%;
+    height: 70%;
+    box-sizing: border-box;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.30);
+    background-color: rgb(223, 219, 219);
+}
+
+.card>img {
+    display: block;
+    width: 100%;
+    height: 50%;
+    margin: 0px;
+}
+.question-card {
+    padding: 10px;
+}
+.question > a {
+    text-decoration: none;
+    background-color: dodgerblue;
+    padding: 5px;
+}
+.card1 {
+    width: 100%;
+    height: fit-content;
+    padding: 15px;
+    background-color: rgb(100, 98, 98);
+}
+h3 {
+    text-align: center;
+}
+#social {
+    text-align: center;
+    margin: 0% auto;
+    font-size: 25px;
+    padding: 30px;
+}
+#whatsapp {
+    color: white;
+    border-radius: 15px;
+    padding: 5px;
+    background-color: green;
+}
+#facebook {
+    color: rgb(47, 47, 190);
+    padding: 7px;
+    border-radius: 15px;
+    background-color: white;
+}
+#twitter {
+    color: white;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: rgb(95, 95, 224);
+}
+#instagram{
+    color: white;
+    padding: 5px;
+    border-radius: 15px;
+    background-image: linear-gradient(rgb(72, 72, 202),rgb(207, 17, 207),rgb(126, 121, 121));
+}
